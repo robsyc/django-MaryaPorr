@@ -1,7 +1,7 @@
 # django-MaryaPorr
 Django e-commerce website of MaryaPorr
 
-To-do
+## To-do
 - [ ] Landing page
 - [ ] About page
 - [ ] List view (products)
