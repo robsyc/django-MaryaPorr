@@ -7,4 +7,6 @@ Django e-commerce website of MaryaPorr
 - [ ] List view (products)
 - [ ] Detail view (produt)
 - [ ] Hide Stripe details
-- [ ] Setup Stripe
+- [ ] Setup Cloudflare domain
+- [ ] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
+- [ ] Setup complete Stripe profile
