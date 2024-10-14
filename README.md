@@ -32,7 +32,7 @@ fuser -k 8000/tcp
 - [ ] Landing page
 - [ ] About page
 - [ ] List view (4-6 products)
-- [ ] Detail view (product) with redirect to buy on Stripe
+- [ ] Detail view (product) with technical info and redirect to buy on Stripe
 - [ ] Hide Stripe API details
 - [ ] Setup Cloudflare domain
 - [ ] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
