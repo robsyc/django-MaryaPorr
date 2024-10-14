@@ -9,7 +9,7 @@ git clone https://github.com/robsyc/django-MaryaPorr.git
 cd django-MaryaPorr
 
 # Create and setup virtual environment
-python venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
@@ -33,7 +33,7 @@ fuser -k 8000/tcp
 - [ ] About page
 - [ ] List view (products)
 - [ ] Detail view (product) with redirect to Stripe
-- [ ] Hide Stripe details
+- [ ] Hide Stripe API details
 - [ ] Setup Cloudflare domain
 - [ ] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
-- [ ] Setup complete Stripe profile w/ company & bank details
+- [ ] Complete Stripe profile w/ company & bank details
