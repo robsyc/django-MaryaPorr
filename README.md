@@ -37,4 +37,4 @@ fuser -k 8000/tcp
 - [ ] Setup Cloudflare domain
 - [ ] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
 - [ ] Complete Stripe profile w/ company & bank details
-- [ ] Multi-language support (e.g. for Kenia)
+- [ ] Multi-language support (e.g. for Swahili)
