@@ -5,7 +5,7 @@ Django e-commerce website of [MaryaPorr](https://www.maryaporr.com)
 
 ```bash
 # Clone repository
-git clone https://github.com/robsyc/django-MaryaPorr.git
+git clone git@github.com:robsyc/django-MaryaPorr.git
 cd django-MaryaPorr
 
 # Create and setup virtual environment
