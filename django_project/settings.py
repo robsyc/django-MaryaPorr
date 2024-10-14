@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-8+m!cqa4g+fd7(j8a5ubqt_$wz+ux5j8avkj_sd8m&+3)q9=b8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -69,7 +70,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_project.wsgi.application'
+# WSGI_APPLICATION = 'django_project.wsgi.application'
+WSGI_APPLICATION = 'django_project.wsgi.app'
 
 
 # Database
@@ -81,6 +83,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Vercel Postgres DB?!
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': '<mydb>',
+#         'USER': '<myuser>',
+#         'PASSWORD': '<mypass>',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
@@ -124,5 +138,15 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Stripe API keys
+
 STRIPE_PUBLIC_KEY = "pk_test_51Q9Mgc06AuYbLRJ64DXmtpZwW3BeRSJ2pPAxdBjnIvaiaijDWtdFBhyB75h1ZwQO9p4CSnfcLgpV0NZuaR9049En00gBBmOYlV"
 STRIPE_SECRET_KEY = "sk_test_51Q9Mgc06AuYbLRJ6VdsbfXsudyXTavcXAzUlfbdgvjJl5DwfC3nEsyL9qTViXRk3sH5ToEFYqVhqMcUOASc9tjlW00RwGAUygL"
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.1/howto/static-files/
+
+STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
