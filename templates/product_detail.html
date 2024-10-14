@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+{% block content %}
+  <h1>{{ product.name }}</h1>
+  <img src="{{ product.image.url }}" alt="{{ product.name }}">
+  <p>{{ product.description }}</p>
+  <p>Price: ${{ product.price }}</p>
+  <form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="stripe_product_code" value="{{ product.stripe_product_code }}">
+    <button type="submit">Buy Now</button>
+  </form>
+  <a href="{% url 'products' %}">Back to Products</a>
+{% endblock %}

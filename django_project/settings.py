@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,13 +24,25 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8+m!cqa4g+fd7(j8a5ubqt_$wz+ux5j8avkj_sd8m&+3)q9=b8'
+# Create a new one with the following command: python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+SECRET_KEY = os.getenv("SECRET_KEY")
+STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
+DEV_MODE = os.getenv("DEV_MODE")
+
+if not SECRET_KEY or not STRIPE_PUBLIC_KEY or not STRIPE_SECRET_KEY or not DEV_MODE:
+    raise ValueError("One or more environment variables are not set.")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'www.maryaporr.com']
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.1/howto/static-files/
+STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Application definition
 
@@ -77,15 +92,15 @@ WSGI_APPLICATION = 'django_project.wsgi.app'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {}
+# DATABASES = {}
 
 # Django default DB
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Vercel Postgres DB?!
 # DATABASES = {
@@ -140,16 +155,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Stripe API keys
-
-STRIPE_PUBLIC_KEY = "pk_test_51Q9Mgc06AuYbLRJ64DXmtpZwW3BeRSJ2pPAxdBjnIvaiaijDWtdFBhyB75h1ZwQO9p4CSnfcLgpV0NZuaR9049En00gBBmOYlV"
-STRIPE_SECRET_KEY = "sk_test_51Q9Mgc06AuYbLRJ6VdsbfXsudyXTavcXAzUlfbdgvjJl5DwfC3nEsyL9qTViXRk3sH5ToEFYqVhqMcUOASc9tjlW00RwGAUygL"
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_URL = "static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")

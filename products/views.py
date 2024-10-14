@@ -4,6 +4,9 @@ from django.urls import reverse
 
 import stripe
 
+from django.views.generic import ListView, DetailView
+from .models import Product
+
 
 def home(request):
     stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -22,9 +25,6 @@ def home(request):
         return redirect(checkout_session.url, code=303)
     return render(request, "home.html")
 
-def products(request):
-    return render(request, "products.html")
-
 def about(request):
     return render(request, "about.html")
 
@@ -33,3 +33,13 @@ def success(request):
 
 def cancel(request):
     return render(request, "cancel.html")
+
+class ProductListView(ListView):
+    model = Product
+    template_name = "products.html"
+    context_object_name = "products"
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "product_detail.html"
+    context_object_name = "product"
