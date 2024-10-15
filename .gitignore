@@ -2,6 +2,7 @@
 *.log
 *.pyc
 media
+static/imgs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
