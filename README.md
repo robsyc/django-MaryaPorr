@@ -33,8 +33,8 @@ fuser -k 8000/tcp
 - [ ] About page
 - [ ] List view (4-6 products)
 - [ ] Detail view (product) with technical info and redirect to buy on Stripe
-- [ ] Hide Stripe API details
+- [x] Hide Stripe API details (and other env variables)
 - [x] Setup Cloudflare domain
-- [ ] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
+- [x] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
 - [ ] Complete Stripe profile w/ company & bank details
 - [ ] Multi-language support (e.g. for Swahili)

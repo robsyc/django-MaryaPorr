@@ -13,3 +13,4 @@ typing_extensions==4.12.2
 urllib3==2.2.3
 pillow==10.4.0
 python-dotenv==1.0.1
+psycopg2-binary==2.9.9
