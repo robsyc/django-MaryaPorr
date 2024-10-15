@@ -25,6 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # Create a new one with the following command: python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+DEBUG = os.getenv("DEBUG") or False # don't run with debug turned on in production!
 SECRET_KEY = os.getenv("SECRET_KEY")
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
@@ -32,9 +33,6 @@ DEV_MODE = os.getenv("DEV_MODE")
 
 if not SECRET_KEY or not STRIPE_PUBLIC_KEY or not STRIPE_SECRET_KEY or not DEV_MODE:
     raise ValueError("One or more environment variables are not set.")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'www.maryaporr.com']
 
@@ -91,28 +89,25 @@ WSGI_APPLICATION = 'django_project.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {}
-
-# Django default DB
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEV_MODE == "True":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
-
-# Vercel Postgres DB?!
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': '<mydb>',
-#         'USER': '<myuser>',
-#         'PASSWORD': '<mypass>',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+else:
+    DATABASES = {
+        'default': {
+    #         'ENGINE': 'django.db.backends.postgresql_psycopg2', # use this??
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.getenv('POSTGRES_DATABASE'),
+            'USER': os.getenv('POSTGRES_USER'),
+            'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+            'HOST': os.getenv('POSTGRES_HOST'),
+            'PORT': os.getenv('POSTGRES_DB_PORT'),
+        }
+    }
 
 
 # Password validation
