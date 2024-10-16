@@ -30,9 +30,21 @@ fuser -k 8000/tcp
 
 ## To-do
 - [ ] Landing page
+  - [ ] Logo-wide
+  - [ ] Hero section (See: [page](https://www.italiancricketfarm.com/)) with square logo
+  - [ ] Infinite looping image carousel
 - [ ] About page
+- [ ] Favicon
+- [ ] Footer
+  - [ ] Sign up for newsletter form
+  - [ ] Body bg nav-green to footer-grey
 - [ ] List view (4-6 products)
-- [ ] Detail view (product) with technical info and redirect to buy on Stripe
+  - [ ] Images local static instead of S3
+  - [ ] Cart ~ session
+- [ ] Detail view (product) with technical info
+  - [ ] Breadcrumb
+  - [ ] Redirect to Stripe directly
+  - [ ] Basket
 - [x] Hide Stripe API details (and other env variables)
 - [x] Setup Cloudflare domain
 - [x] Host on [Render](https://docs.render.com/deploy-django) or Vercel?
