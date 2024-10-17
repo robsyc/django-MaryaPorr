@@ -1,1 +1,0 @@
-Local static files, not yet sure if this should contain images or not. For now, it's just the README.md file.
