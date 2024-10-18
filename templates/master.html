@@ -9,11 +9,11 @@
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}">  this is not working as it should -->
-    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success mt-0 sticky-top zindex-sticky mb-3">
+    <nav style="background-color: hsl(258, 59%, 66%); border-color: hsl(258, 59%, 60%);"
+    class="navbar navbar-expand-lg navbar-light mt-0 sticky-top zindex-sticky mb-3">
         <div class="container-md">
             <a class="navbar-brand" href="{% url 'home' %}">MaryaPorr</a>
             <button 
@@ -23,7 +23,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav banner">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
@@ -39,10 +39,8 @@
     </nav>
   
     <main>
-        <div class="container">
-            {% block content %}
-            {% endblock %}
-        </div>
+        {% block content %}
+        {% endblock %}
     </main>
   
     <footer class="footer mt-auto bg-light">
@@ -64,8 +62,8 @@
                     <h5>Connect With Us</h5>
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-whatsapp"></i></a></li>
                     </ul>
                 </div>
             </div>

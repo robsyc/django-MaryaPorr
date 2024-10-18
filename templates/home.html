@@ -4,54 +4,77 @@
   Homepage
 {% endblock %}
 
+
 {% block content %}
-  <h1>To end malnutrition once and for all!</h1>
-  <form method="post">
+
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">MaryaPorr</h1>
+  <div class="col-lg-6 mx-auto">
+    <h2 class="mb-4">To end malnutrition once and for all!</h1>
+    <p class="lead mb-4">MaryaPorr is a highly nutritious ready-to-use therapeutic porridge to treat severe acute malnutrition in children.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a href="{% url 'products' %}">
+        <button class="btn btn-primary btn-lg">See our products</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- <form method="post">
     {% csrf_token %}
-    <button class="btn btn-success" type="submit">Purchase!</button>
-  </form>
-  <p>
-  Quae dolore commodi quia temporibus. Libero minima consectetur qui qui accusamus sint ea. Necessitatibus sed deleniti sed vitae minima dolor voluptatem sint. Vero in asperiores aut facere repellat inventore sit suscipit.
+    <button class="btn btn-secondary" type="submit">Purchase!</button>
+  </form> -->
 
-  Aliquid maiores dolorem dicta excepturi. Laudantium molestiae minus consequuntur odio nemo omnis dolores earum. Libero beatae necessitatibus repudiandae omnis labore quia iste maiores. Iusto molestias et quisquam aut et. Nobis occaecati placeat corporis et. Rem ea voluptates numquam commodi quo.
+<!-- <section style="overflow: hidden;">
+  <article class="d-flex"
+  style="width: 200%; animation: bannermove 20s linear infinite;">
+    <div class="w-100">
+      <ul class="d-flex list-unstyled pl-0 m-0">
+        <li><img class="h-25" src="static/media/img/aid_workers.jpg" /></li>
+        <li><img class="h-25" src="static/media/img/zoom_in.jpg" /></li>
+        <li><img class="h-25" src="static/media/img/kids_wcups.jpg" /></li>
+        <li><img class="h-25" src="static/media/img/maryam.jpg" /></li>
+      </ul>
+    </div>
+    <div class="w-100">
+      <ul class="d-flex list-unstyled pl-0 m-0">
+        <li><img class="h-25" src="static/media/img/cricket.png" /></li>
+        <li><img class="h-25" src="static/media/img/kid_w_aid.png" /></li>
+        <li><img class="h-25" src="static/media/img/kids_handinhand.png" /></li>
+        <li><img class="h-25" src="static/media/img/lots_of_kids.png" /></li>
+      </ul>
+    </div>
+  </article>
+</section> -->
 
-  Aut suscipit numquam praesentium molestiae ea. Atque numquam rerum vel voluptas quia laborum. Cupiditate aut aut magnam iste facilis. Tempore et dicta dolor illo molestiae quia eaque corporis.
+<section>
+  <div class="container-md my-5">
+    <h1>
+      Malnutrition in the world
+    </h1>
+  </div>
+</section>
 
-  Eligendi voluptatem omnis eum et voluptatum porro voluptatem deleniti. Voluptatem neque eum modi labore voluptatibus. At et quisquam consectetur ea a maiores perspiciatis. Est eaque in dolore.
+<section>
+  <div class="container-md my-5">
+    <h1>
+      The value of insects
+    </h1>
+  </div>
+</section>
 
-  Totam aliquid numquam omnis dicta enim esse totam. Occaecati quo repellendus est reiciendis vel in veritatis rerum. Consequatur quod asperiores fugit et consequatur earum. Sequi et laudantium ipsam dolorem et. Dignissimos expedita aut blanditiis voluptas esse autem ut. Rem laborum blanditiis veritatis.
-  </p>
-  <p>
-  Quae dolore commodi quia temporibus. Libero minima consectetur qui qui accusamus sint ea. Necessitatibus sed deleniti sed vitae minima dolor voluptatem sint. Vero in asperiores aut facere repellat inventore sit suscipit.
+<section>
+  <div class="container-md my-5">
+    <h1>
+      Relief funds and food aid
+    </h1>
+  </div>
+</section>
 
-  Aliquid maiores dolorem dicta excepturi. Laudantium molestiae minus consequuntur odio nemo omnis dolores earum. Libero beatae necessitatibus repudiandae omnis labore quia iste maiores. Iusto molestias et quisquam aut et. Nobis occaecati placeat corporis et. Rem ea voluptates numquam commodi quo.
 
-  Aut suscipit numquam praesentium molestiae ea. Atque numquam rerum vel voluptas quia laborum. Cupiditate aut aut magnam iste facilis. Tempore et dicta dolor illo molestiae quia eaque corporis.
+<style>
 
-  Eligendi voluptatem omnis eum et voluptatum porro voluptatem deleniti. Voluptatem neque eum modi labore voluptatibus. At et quisquam consectetur ea a maiores perspiciatis. Est eaque in dolore.
+</style>
 
-  Totam aliquid numquam omnis dicta enim esse totam. Occaecati quo repellendus est reiciendis vel in veritatis rerum. Consequatur quod asperiores fugit et consequatur earum. Sequi et laudantium ipsam dolorem et. Dignissimos expedita aut blanditiis voluptas esse autem ut. Rem laborum blanditiis veritatis.
-  </p>
-  <p>
-  Quae dolore commodi quia temporibus. Libero minima consectetur qui qui accusamus sint ea. Necessitatibus sed deleniti sed vitae minima dolor voluptatem sint. Vero in asperiores aut facere repellat inventore sit suscipit.
-
-  Aliquid maiores dolorem dicta excepturi. Laudantium molestiae minus consequuntur odio nemo omnis dolores earum. Libero beatae necessitatibus repudiandae omnis labore quia iste maiores. Iusto molestias et quisquam aut et. Nobis occaecati placeat corporis et. Rem ea voluptates numquam commodi quo.
-
-  Aut suscipit numquam praesentium molestiae ea. Atque numquam rerum vel voluptas quia laborum. Cupiditate aut aut magnam iste facilis. Tempore et dicta dolor illo molestiae quia eaque corporis.
-
-  Eligendi voluptatem omnis eum et voluptatum porro voluptatem deleniti. Voluptatem neque eum modi labore voluptatibus. At et quisquam consectetur ea a maiores perspiciatis. Est eaque in dolore.
-
-  Totam aliquid numquam omnis dicta enim esse totam. Occaecati quo repellendus est reiciendis vel in veritatis rerum. Consequatur quod asperiores fugit et consequatur earum. Sequi et laudantium ipsam dolorem et. Dignissimos expedita aut blanditiis voluptas esse autem ut. Rem laborum blanditiis veritatis.
-  </p>
-  <p>
-  Quae dolore commodi quia temporibus. Libero minima consectetur qui qui accusamus sint ea. Necessitatibus sed deleniti sed vitae minima dolor voluptatem sint. Vero in asperiores aut facere repellat inventore sit suscipit.
-
-  Aliquid maiores dolorem dicta excepturi. Laudantium molestiae minus consequuntur odio nemo omnis dolores earum. Libero beatae necessitatibus repudiandae omnis labore quia iste maiores. Iusto molestias et quisquam aut et. Nobis occaecati placeat corporis et. Rem ea voluptates numquam commodi quo.
-
-  Aut suscipit numquam praesentium molestiae ea. Atque numquam rerum vel voluptas quia laborum. Cupiditate aut aut magnam iste facilis. Tempore et dicta dolor illo molestiae quia eaque corporis.
-
-  Eligendi voluptatem omnis eum et voluptatum porro voluptatem deleniti. Voluptatem neque eum modi labore voluptatibus. At et quisquam consectetur ea a maiores perspiciatis. Est eaque in dolore.
-
-  Totam aliquid numquam omnis dicta enim esse totam. Occaecati quo repellendus est reiciendis vel in veritatis rerum. Consequatur quod asperiores fugit et consequatur earum. Sequi et laudantium ipsam dolorem et. Dignissimos expedita aut blanditiis voluptas esse autem ut. Rem laborum blanditiis veritatis.
-  </p>
 {% endblock %}

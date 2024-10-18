@@ -30,7 +30,9 @@ fuser -k 8000/tcp
 
 ## To-do
 - [ ] Landing page
-  - [ ] Logo-wide
+  - [ ] Logo
+    - [ ] Calabash-like with colors
+    - [ ] Square, wide, favicon
   - [ ] Hero section (See: [page](https://www.italiancricketfarm.com/)) with square logo
   - [ ] Infinite looping image carousel
   - [ ]  (check out powerpoint)
