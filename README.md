@@ -33,7 +33,11 @@ fuser -k 8000/tcp
   - [ ] Logo-wide
   - [ ] Hero section (See: [page](https://www.italiancricketfarm.com/)) with square logo
   - [ ] Infinite looping image carousel
-- [ ] About page
+  - [ ]  (check out powerpoint)
+    - [ ] 1. Malnutrition stats (of children) in the world (from WHO)
+    - [ ] 2. Visual comparison/ecological footprint of insect vs. chicken vs. cow (e.g. nutrients, water, land, GHG emissions)
+    - [ ] 3. Relief / food aid stats (how much money is spent)
+- [ ] About page: team, story, documentary
 - [ ] Favicon
 - [ ] Footer
   - [ ] Sign up for newsletter form
