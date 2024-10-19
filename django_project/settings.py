@@ -80,7 +80,6 @@ TEMPLATES = [
 # WSGI_APPLICATION = 'django_project.wsgi.application'
 WSGI_APPLICATION = 'django_project.wsgi.app'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 if DEV_MODE == "True":
@@ -151,6 +150,6 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 BOOTSTRAP5 = {
-    "css_url": "/static/css/bootstrap.css"
+    "css_url": STATIC_URL + "css/bootstrap.css"
     # "theme_url": "/static/css/bootstrap.css",
 }
