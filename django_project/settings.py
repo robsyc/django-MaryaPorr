@@ -151,6 +151,6 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 BOOTSTRAP5 = {
-    "css_url": "static/css/bootstrap.css"
+    "css_url": "/static/css/bootstrap.css"
     # "theme_url": "/static/css/bootstrap.css",
 }
