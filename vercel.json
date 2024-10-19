@@ -10,22 +10,22 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "staticfiles"
+        "distDir": "staticfiles_build"
       }
     }
   ],
   "routes": [
     {
       "src": "/debug1",
-      "dest": "/staticfiles/css/bootstrap.css"
+      "dest": "/staticfiles_build/css/bootstrap.css"
     },
     {
       "src": "/debug2",
-      "dest": "/staticfiles/static/css/bootstrap.css"
+      "dest": "/static/css/bootstrap.css"
     },
     {
       "src": "/static/(.*)",
-      "dest": "/staticfiles/$1"
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
