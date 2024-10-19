@@ -16,12 +16,8 @@
   ],
   "routes": [
     {
-      "src": "/static/css/bootstrap.css",
-      "dest": "/static/css/bootstrap.css"
-    },
-    {
       "src": "/debug",
-      "dest": "/static/css/bootstrap.css"
+      "dest": "/static/style/custom_bootstrap.css"
     },
     {
       "src": "/static/(.*)",
