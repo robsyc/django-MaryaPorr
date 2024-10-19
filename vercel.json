@@ -16,11 +16,11 @@
   ],
   "routes": [
     {
-      "src": "/debug1",
-      "dest": "/staticfiles_build/css/bootstrap.css"
+      "src": "/static/css/bootstrap.css",
+      "dest": "/static/css/bootstrap.css"
     },
     {
-      "src": "/debug2",
+      "src": "/debug",
       "dest": "/static/css/bootstrap.css"
     },
     {
