@@ -36,16 +36,6 @@ if not SECRET_KEY or not STRIPE_PUBLIC_KEY or not STRIPE_SECRET_KEY or not DEV_M
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'www.maryaporr.com']
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.1/howto/static-files/
-STATIC_URL = "static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-BOOTSTRAP5 = {
-    "css_url": STATIC_URL + "css/bootstrap.css"
-    # "theme_url": "/static/css/bootstrap.css",
-}
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -154,3 +144,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.1/howto/static-files/
+STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+BOOTSTRAP5 = {
+    "css_url": "static/css/bootstrap.css"
+    # "theme_url": "/static/css/bootstrap.css",
+}
