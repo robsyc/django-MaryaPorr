@@ -42,7 +42,7 @@
   --bs-success: rgb(158, 189, 112);
   --bs-info: hsl(188, 100%, 60%);
   --bs-warning: #ff851b;
-  --bs-danger: #ff4136;
+  --bs-danger: hsl(3, 100%, 61%);
   --bs-light: rgb(247, 240, 255);
   --bs-dark: rgb(0, 15, 8);
   --bs-primary-rgb: 154, 125, 222;

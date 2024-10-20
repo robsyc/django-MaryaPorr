@@ -2,7 +2,8 @@
 
 {% block content %}
 
-<div class="px-4 py-5 my-4 my-md-5 text-center">
+<!-- Hero page -->
+<div class="px-4 py-4 my-4 my-md-5 text-center">
   <h1 class="display-5 fw-bold">MaryaPorr</h1>
   <div class="col-lg-6 mx-auto">
     <h2 class="mb-4">To end malnutrition once and for all!</h1>
@@ -60,7 +61,7 @@
           <div class="col-md-3">
             <div class="card">
               <div class="card-img">
-                <img src="/static/media/img/kid_w_aid.jpg" class="img-fluid" alt="Child getting medical aid">
+                <img src="/static/media/img/kid_w_aid.jpg" class="img-fluid" alt="Malnourished child getting medical aid">
               </div>
             </div>
           </div>
@@ -114,16 +115,70 @@
 
 <section>
   <div class="container-md my-5">
-    <h1>
+    <h1 class="fw-bold">
       Children are suffering from malnutrition
     </h1>
+    <div class="container my-4">
+      <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="/static/media/img/kid_w_aid.jpg" class="img-fluid" alt="Malnourished child receiving medical aid">
+          <p class="text-center mt-2">Malnourished child receiving medical aid</p>
+        </div>
+        <div class="col-md-6">
+          <p>
+            The <a href="https://www.who.int/news-room/fact-sheets/detail/malnutrition">World Health Organization (WHO)</a> 
+            informs us that malnutrition in children is a major public health issue.
+          </p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              Nearly half of deaths among children under 5 years of age are linked to undernutrition.
+            </li>
+            <li class="list-group-item">
+              Globally in 2022, 149 million children under 5 were estimated to be stunted (too short for age), 45 million were estimated to be wasted (too thin for height).
+            </li>
+            <li class="list-group-item">
+              In Africa, 50% of preschool children have at least one micronutrient deficiency.
+            </li>
+            <li class="list-group-item">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-5 mx-auto my-auto">
+        <p class="lead text-center text-md-end my-auto">
+          Every 10 Seconds, a Child Dies from Malnutrition
+        </p>
+      </div>
+      <div class="col-md-2 mx-auto my-auto">
+        <div class="d-flex justify-content-center">
+          <div class="align-self-center">
+            <div class="triangle">
+            </div>
+          </div>
+        </div>
+        <div class="lead text-center my-auto">
+          <div class="fs-2" id="incrementing-number">0</div>
+        </div>
+      </div>
+      <div class="col-md-5 mx-auto my-auto">
+        <p class="lead text-center text-md-start my-auto">
+          Since You Started Reading This Page
+        </p>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <section>
   <div class="container-md my-5">
     <h1>
-      Insect are a highly nutritious and sustainable food source
+      Insects are a highly nutritious and sustainable food source
     </h1>
   </div>
 </section>
@@ -137,6 +192,7 @@
 </section>
 
 <style>
+  /* Slideshow Images */
   @media (max-width: 767px) {
 		.carousel-inner .carousel-item > div {
 			display: none;
@@ -145,49 +201,72 @@
 			display: block;
 		}
 	}
-
 	.carousel-inner .carousel-item.active,
 	.carousel-inner .carousel-item-next,
 	.carousel-inner .carousel-item-prev {
 		display: flex;
 	}
-
-	/* medium and up screens */
 	@media (min-width: 768px) {
-
 		.carousel-inner .carousel-item-end.active,
 		.carousel-inner .carousel-item-next {
 			transform: translateX(25%);
 		}
-
 		.carousel-inner .carousel-item-start.active, 
 		.carousel-inner .carousel-item-prev {
 			transform: translateX(-25%);
 		}
 	}
-
 	.carousel-inner .carousel-item-end,
 	.carousel-inner .carousel-item-start { 
 		transform: translateX(0);
 	}
+
+  /* Triangle Counter */
+  .triangle {
+  --r:10px; /* border radius */
+  --b:20px; /* border width */
+  width: 200px;
+  aspect-ratio: 1/cos(30deg);
+
+  --_g:calc(tan(60deg)*var(--r)) bottom var(--r),red 98%,#0000 101%;
+  -webkit-mask:
+    conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+     0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+    radial-gradient(var(--r) at left  var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+  background: hsla(3, 100%, 61%, 0.40);
+  clip-path: polygon(
+    50% 0,100% 100%,0 100%,50% 0,
+    50% var(--b),calc(var(--b)*cos(30deg)) calc(100% - var(--b)/2),calc(100% - var(--b)*cos(30deg)) calc(100% - var(--b)/2),50% var(--b));
+}
 </style>
 
 <script>
+  // Slide show
   let items = document.querySelectorAll('.carousel .carousel-item')
+  items.forEach((el) => {
+    const minPerSlide = 4
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+      if (!next) {
+          // wrap carousel by using first child
+          next = items[0]
+      }
+      let cloneChild = next.cloneNode(true)
+      el.appendChild(cloneChild.children[0])
+      next = next.nextElementSibling
+  }
+  })
 
-items.forEach((el) => {
-  const minPerSlide = 4
-  let next = el.nextElementSibling
-  for (var i=1; i<minPerSlide; i++) {
-    if (!next) {
-        // wrap carousel by using first child
-        next = items[0]
-    }
-    let cloneChild = next.cloneNode(true)
-    el.appendChild(cloneChild.children[0])
-    next = next.nextElementSibling
-}
-})
+  // Triangle Counter
+  let count = 0;
+  const incrementingNumber = document.getElementById('incrementing-number');
+  
+  setInterval(() => {
+    count++;
+    incrementingNumber.textContent = count;
+  }, 10000);
 </script>
 
 {% endblock %}
