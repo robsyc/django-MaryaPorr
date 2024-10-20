@@ -26,7 +26,7 @@
   </form> -->
 
 <!-- Carousel -->
-<div class="text-center">
+<div class="text-center my-5 py-0 py-md-3">
   <div class="row mx-auto my-auto justify-content-center">
     <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner" role="listbox">
@@ -113,9 +113,9 @@
   </div>		
 </div>
 
-<section>
+<section class="reveal">
   <div class="container-md my-5">
-    <h1 class="fw-bold">
+    <h1 class="fw-bold py-2">
       Children are suffering from malnutrition
     </h1>
     <div class="container my-4">
@@ -126,66 +126,74 @@
         </div>
         <div class="col-md-6">
           <p>
-            The <a href="https://www.who.int/news-room/fact-sheets/detail/malnutrition">World Health Organization (WHO)</a> 
+            The <a href="https://www.who.int/news-room/fact-sheets/detail/malnutrition" target="_blank">World Health Organization (WHO)</a> 
             informs us that malnutrition in children is a major public health issue.
           </p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              Nearly half of deaths among children under 5 years of age are linked to undernutrition.
-            </li>
-            <li class="list-group-item">
-              Globally in 2022, 149 million children under 5 were estimated to be stunted (too short for age), 45 million were estimated to be wasted (too thin for height).
-            </li>
-            <li class="list-group-item">
-              In Africa, 50% of preschool children have at least one micronutrient deficiency.
-            </li>
-            <li class="list-group-item">
-            </li>
+          <ul>
+            <li>Nearly half of deaths among children under 5 years of age are linked to undernutrition.</li>
+            <li>In 2022, 149 million children under 5 were estimated to be stunted (too short for age), 45 million were estimated to be wasted (too thin for height).</li>
+            <li>In Africa, 50% of preschool children have at least one micronutrient deficiency.</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-5 mx-auto my-auto">
-        <p class="lead text-center text-md-end my-auto">
-          Every 10 Seconds, a Child Dies from Malnutrition
-        </p>
-      </div>
-      <div class="col-md-2 mx-auto my-auto">
-        <div class="d-flex justify-content-center">
-          <div class="align-self-center">
-            <div class="triangle">
+          <div class="card shadow-sm mx-1 my-4 p-1">
+            <div class="card-body d-flex align-items-center">
+              <a href="https://www.linkedin.com/in/maryam-imbumi-11113b79/" target="_blank">
+                <img src="https://media.licdn.com/dms/image/v2/C4D03AQFKHlUfY_CF5g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604139546043?e=1735171200&v=beta&t=cnfekVRmTpmCd6Dc1q0aTXfMqcSqfK_d9IOOaKVz4PU" 
+                     alt="Maryam Imbumi" 
+                     class="rounded-circle me-3" 
+                     style="width: 50px; height: 50px;">
+              </a>
+              <div>
+                <div class="mb-1">
+                  <cite>Growing up in Kenya, twice I almost died because of hunger and malnutrition.</cite>
+                </div>
+                <div class="text-muted">
+                  - Our founder <a href="https://www.linkedin.com/in/maryam-imbumi-11113b79/" target="_blank">Maryam Imbumi</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="lead text-center my-auto">
-          <div class="fs-2" id="incrementing-number">0</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-5 mx-auto my-auto mb-3 mb-md-auto">
+        <p class="lead text-center text-md-end my-auto">
+          Every 10 seconds, a child dies from malnutrition...
+        </p>
+      </div>
+      <div 
+      class="col-md-2 mx-auto my-auto d-flex justify-content-center align-items-center position-relative" 
+      style="height: 200px;">
+        <div style="z-index: 1; position: absolute;">
+          <div class="triangle mb-5"></div>
         </div>
+        <div style="z-index: 2; position: absolute;" class="lead text-center fs-1" id="incrementing-number">0</div>
       </div>
       <div class="col-md-5 mx-auto my-auto">
         <p class="lead text-center text-md-start my-auto">
-          Since You Started Reading This Page
+          ...since you started reading this page
         </p>
       </div>
     </div>
   </div>
-
 </section>
 
-<section>
+<section class="reveal">
   <div class="container-md my-5">
-    <h1>
+    <h1 class="fw-bold">
       Insects are a highly nutritious and sustainable food source
     </h1>
   </div>
 </section>
 
-<section>
+<section class="reveal">
   <div class="container-md my-5">
-    <h1>
+    <h1 class="fw-bold">
       Relief funds should be spent on healthy food
     </h1>
   </div>
@@ -223,12 +231,12 @@
 
   /* Triangle Counter */
   .triangle {
-  --r:10px; /* border radius */
+  --r:8px; /* border radius */
   --b:20px; /* border width */
   width: 200px;
   aspect-ratio: 1/cos(30deg);
 
-  --_g:calc(tan(60deg)*var(--r)) bottom var(--r),red 98%,#0000 101%;
+  --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#ff0000 98%,#0000 101%;
   -webkit-mask:
     conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
      0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
@@ -239,7 +247,30 @@
   clip-path: polygon(
     50% 0,100% 100%,0 100%,50% 0,
     50% var(--b),calc(var(--b)*cos(30deg)) calc(100% - var(--b)/2),calc(100% - var(--b)*cos(30deg)) calc(100% - var(--b)/2),50% var(--b));
-}
+  overflow: hidden;
+  }
+  .triangle::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(
+      from -45deg,
+      transparent, 
+      hsl(3, 100%, 61%), 
+      transparent 30%
+    );
+    animation: rotate 10s linear infinite;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
 </style>
 
 <script>
@@ -267,6 +298,15 @@
     count++;
     incrementingNumber.textContent = count;
   }, 10000);
+
+  // ScrollReveal
+  ScrollReveal().reveal('.reveal', {
+    delay: 200,
+    duration: 1000,
+    distance: '50px',
+    origin: 'bottom',
+    reset: false
+  });
 </script>
 
 {% endblock %}
