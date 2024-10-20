@@ -25,7 +25,7 @@
     <button class="btn btn-secondary" type="submit">Purchase!</button>
   </form> -->
 
-<!-- Carousel -->
+<!-- Carousel slideshow -->
 <div class="text-center">
   <div class="row mx-auto my-auto justify-content-center">
     <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -113,6 +113,7 @@
   </div>		
 </div>
 
+<!-- Section: Malnutrition -->
 <section class="reveal">
   <div class="container-md my-5">
     <h1 class="fw-bold py-2">
@@ -251,12 +252,13 @@
   }
   .triangle::before {
     content: '';
+    overflow: hidden;
     position: absolute;
     z-index: -1;
     left: -50%;
     top: -50%;
-    width: 200%;
-    height: 200%;
+    width: 190%;
+    height: 190%;
     background-image: conic-gradient(
       from -45deg,
       transparent, 
