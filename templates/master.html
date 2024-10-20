@@ -61,25 +61,29 @@
                 </div>
                 <div class="col-lg-3">
                     <h5>Connect With Us</h5>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="https://www.facebook.com/people/MaryaPorr/61564453629235/" class="text-muted"><i class="bi bi-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/maryaporr/posts/?feedView=all" class="text-muted"><i class="bi bi-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-whatsapp"></i></a></li>
+                    <ul class="list-inline py-1">
+                        <li class="list-inline-item mx-1"><a href="https://www.facebook.com/people/MaryaPorr/61564453629235/" class="text-muted"><i class="bi bi-facebook h3"></i></a></li>
+                        <li class="list-inline-item mx-1"><a href="https://www.linkedin.com/company/maryaporr/posts/?feedView=all" class="text-muted"><i class="bi bi-linkedin h3"></i></a></li>
                     </ul>
                 </div>
             </div>
             <hr>
             <div class="row pt-3 pb-4">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">© 2024 MaryaPorr</p>
+                    <p class="mb-0">© <span id="year"></span> MaryaPorr. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
+                <!-- <div class="col-md-6 text-center text-md-end">
                     <a href="#" class="text-muted">Privacy Policy</a>
                     <span class="mx-2">|</span>
                     <a href="#" class="text-muted">Terms of Service</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
+
+    <script>
+        let year = new Date().getFullYear();
+        document.getElementById('year').textContent = year;
+    </script>
 </body>
 </html>
