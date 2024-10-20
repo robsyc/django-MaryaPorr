@@ -34,7 +34,7 @@ fuser -k 8000/tcp
     - [ ] Calabash-like with colors
     - [ ] Square, wide, favicon
   - [ ] Hero section (See: [page](https://www.italiancricketfarm.com/)) with square logo
-  - [ ] Infinite looping image carousel
+  - [x] Infinite looping image carousel
   - [ ]  (check out powerpoint)
     - [ ] 1. Malnutrition stats (of children) in the world (from WHO)
     - [ ] 2. Visual comparison/ecological footprint of insect vs. chicken vs. cow (e.g. nutrients, water, land, GHG emissions)
