@@ -3,17 +3,18 @@
 {% block content %}
 
 <!-- Hero page -->
-<div class="px-4 py-4 my-4 my-md-5 text-center">
-  <h1 class="display-5 fw-bold">MaryaPorr</h1>
+<div class="px-4 pt-2 pb-4 mt-2 mb-4 mb-md-5 text-center">
+  <!-- <h1 class="display-5 fw-bold">MaryaPorr</h1> -->
+  <img src="/static/media/img/maryaporr-logo-square.png" class="img-fluid mb-4" style="max-width: 250px; opacity: 0.8;" alt="MaryaPorr Logo">
   <div class="col-lg-6 mx-auto">
-    <h2 class="mb-4">To end malnutrition once and for all!</h1>
+    <h1 class="mb-4">To end malnutrition once and for all!</h1>
     <p class="lead mb-4">MaryaPorr is a highly nutritious ready-to-use therapeutic porridge to treat severe acute malnutrition in children.</p>
     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
       <a href="{% url 'products' %}">
-        <button class="btn btn-primary btn-lg">See our products</button>
+        <button class="btn btn-primary btn-lg">Our Products</button>
       </a>
       <a href="{% url 'about' %}">
-        <button class="btn btn-outline-success btn-lg">Learn who we are</button>
+        <button class="btn btn-outline-secondary btn-lg">Our Mission</button>
       </a>
     </div>
   </div>
@@ -119,33 +120,59 @@
     <h1 class="fw-bold py-2">
       Children are suffering from malnutrition
     </h1>
-    <div class="container my-4">
+    <div class="container-lg my-4 px-md-3">
       <div class="row">
         <div class="col-md-6 mb-4 mb-md-0">
           <img src="/static/media/img/kid_w_aid.jpg" class="img-fluid" alt="Malnourished child receiving medical aid">
           <p class="text-center mt-2">Malnourished child receiving medical aid</p>
         </div>
         <div class="col-md-6">
-          <p>
-            The <a href="https://www.who.int/news-room/fact-sheets/detail/malnutrition" target="_blank">World Health Organization (WHO)</a> 
-            informs us that malnutrition in children is a major public health issue.
-          </p>
-          <ul>
-            <li>Nearly half of deaths among children under 5 years of age are linked to undernutrition.</li>
-            <li>In 2022, 149 million children under 5 were estimated to be stunted (too short for age), 45 million were estimated to be wasted (too thin for height).</li>
-            <li>In Africa, 50% of preschool children have at least one micronutrient deficiency.</li>
-          </ul>
-          <div class="card shadow-sm mx-1 my-4 p-1">
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+                The <a href="https://www.who.int/news-room/fact-sheets/detail/malnutrition" target="_blank">World Health Organization (WHO)</a> 
+                informs us that malnutrition in children is a major public health issue.
+              </p>
+              <ul>
+                <li>Nearly half of deaths among children under 5 years of age are linked to undernutrition.</li>
+                <li>In 2022, 149 million children under 5 were estimated to be stunted (too short for age), 45 million were estimated to be wasted (too thin for height).</li>
+                <li>In Africa, 50% of preschool children have at least one micronutrient deficiency.</li>
+              </ul>
+            </div>
+            <div class="d-none col-md-12 d-lg-block px-0 px-lg-2">
+              <div class="card shadow-sm my-4 p-1">
+                <div class="card-body d-flex align-items-center">
+                  <a href="https://www.linkedin.com/in/maryam-imbumi-11113b79/" target="_blank">
+                    <img src="https://media.licdn.com/dms/image/v2/C4D03AQFKHlUfY_CF5g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604139546043?e=1735171200&v=beta&t=cnfekVRmTpmCd6Dc1q0aTXfMqcSqfK_d9IOOaKVz4PU" 
+                        alt="Maryam Imbumi" 
+                        class="rounded-circle me-3" 
+                        style="width: 50px; height: 50px;">
+                  </a>
+                  <div>
+                    <div class="mb-1">
+                      <cite>Growing up in Kenya, twice I almost died because of hunger and malnutrition. It was at age 6 I decided I wanted to solve malnutrition.</cite>
+                    </div>
+                    <div class="text-muted">
+                      - Our founder <a href="https://www.linkedin.com/in/maryam-imbumi-11113b79/" target="_blank">Maryam Imbumi</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 d-lg-none d-md-block px-0 px-lg-2">
+          <div class="card shadow-sm my-4 p-1">
             <div class="card-body d-flex align-items-center">
               <a href="https://www.linkedin.com/in/maryam-imbumi-11113b79/" target="_blank">
                 <img src="https://media.licdn.com/dms/image/v2/C4D03AQFKHlUfY_CF5g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604139546043?e=1735171200&v=beta&t=cnfekVRmTpmCd6Dc1q0aTXfMqcSqfK_d9IOOaKVz4PU" 
-                     alt="Maryam Imbumi" 
-                     class="rounded-circle me-3" 
-                     style="width: 50px; height: 50px;">
+                    alt="Maryam Imbumi" 
+                    class="rounded-circle me-3" 
+                    style="width: 50px; height: 50px;">
               </a>
               <div>
                 <div class="mb-1">
-                  <cite>Growing up in Kenya, twice I almost died because of hunger and malnutrition.</cite>
+                  <cite>Growing up in Kenya, twice I almost died because of hunger and malnutrition. It was at age 6 I decided I wanted to solve malnutrition.</cite>
                 </div>
                 <div class="text-muted">
                   - Our founder <a href="https://www.linkedin.com/in/maryam-imbumi-11113b79/" target="_blank">Maryam Imbumi</a>
@@ -159,29 +186,35 @@
   </div>
 </section>
 
-<section class="reveal my-5">
-  <div class="container container w-50 w-md-25">
-    <div class="triangle" style="background-color: hsl(258, 59%, 80%);">
-        <p class="lead my-auto">
-          Every 10 seconds, a child dies from malnutrition,
+<section class="reveal">
+  <div class="container-md my-4 px-md-3">
+    <div class="row">
+      <div class="col-md-8 col-12 mx-auto">
+        <div class="triangle" style="background-color: hsl(120, 18%, 68%); border: 3px solid hsl(120, 18%, 60%);">
+          <p class="lead my-auto text-dark fs-3">
+            Every 10 seconds, a child dies from malnutrition,
             <u id="incrementing-number">0</u> 
-          since you started reading
-          this page.
-        </p>
+            since you started reading
+            this page.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="reveal">
-  <div class="container-md my-5">
+<!-- Section: Insects -->
+<section class="reveal py-4">
+  <div class="container-md my-4 px-md-3">
     <h1 class="fw-bold">
       Insects are a highly nutritious and sustainable food source
     </h1>
   </div>
 </section>
 
-<section class="reveal">
-  <div class="container-md my-5">
+<!-- Section: Relief funds -->
+<section class="reveal py-4">
+  <div class="container-md my-4 px-md-3">
     <h1 class="fw-bold">
       Relief funds should be spent on healthy food
     </h1>
@@ -233,7 +266,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 50%, hsl(3, 100%, 61%));
+    background-image: conic-gradient(from var(--angle), transparent 50%, hsl(11, 57%, 54%));
     top: 0;
     left: 0;
     border-radius: 10px;

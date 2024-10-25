@@ -1,0 +1,68 @@
+{% extends "master.html" %}
+
+{% block title %}
+ - Products
+{% endblock %}
+
+{% block content %}
+    <h1>Products Page (List View)</h1>
+    <div class="d-flex align-items-center mb-3">
+      <label for="sort-by" class="flex-item form-label m-0 me-3">Sort by:</label>
+      <select id="sort-by" class="flex-item form-select w-auto" onchange="sortProducts()">
+        <option value="name">Name</option>
+        <option value="price-descending">Price (High to Low)</option>
+        <option value="price-ascending">Price (Low to High)</option>
+      </select>
+    </div>
+
+    <div id="product-list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+      {% for product in products %}
+        <div class="col product-card" data-name="{{ product.name }}" data-price="{{ product.price }}">
+          <div class="card h-100">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">${{ product.price }}</p>
+              <div class="">
+                <a href="{% url 'product_detail' product.pk %}">
+                  <button class="btn btn-primary">
+                    View Details
+                  </button>
+                </a>
+                <!-- <button href="#" class="btn btn-success" disabled>Add to Cart</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      {% if not products %}
+        <div class="col-12">
+          <p>No products found</p>
+        </div>
+      {% endif %}
+    </div>
+
+  <br class="my-3">
+
+  <script>
+    function sortProducts() {
+      const sortBy = document.getElementById('sort-by').value;
+      const productList = document.getElementById('product-list');
+      const productCards = Array.from(productList.getElementsByClassName('product-card'));
+
+      productCards.sort((a, b) => {
+        const aValue = a.dataset[sortBy].toLowerCase();
+        const bValue = b.dataset[sortBy].toLowerCase();
+
+        if (sortBy === 'name') {
+          return aValue.localeCompare(bValue);
+        } else if (sortBy === 'price') {
+          return parseFloat(aValue) - parseFloat(bValue);
+        }
+      });
+
+      // Reorder the sorted cards
+      productCards.forEach(card => productList.appendChild(card));
+    }
+  </script>
+{% endblock %}

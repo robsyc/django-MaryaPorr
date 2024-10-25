@@ -1,67 +1,50 @@
 {% extends "master.html" %}
 
 {% block title %}
- - Products
+ - About
 {% endblock %}
 
 {% block content %}
-    <h1>Products Page (List View)</h1>
-    <div class="d-flex align-items-center mb-3">
-      <label for="sort-by" class="flex-item form-label m-0 me-3">Sort by:</label>
-      <select id="sort-by" class="flex-item form-select w-auto" onchange="sortProducts()">
-        <option value="name">Name</option>
-        <option value="price-descending">Price (High to Low)</option>
-        <option value="price-ascending">Price (Low to High)</option>
-      </select>
-    </div>
-
-    <div id="product-list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-      {% for product in products %}
-        <div class="col product-card" data-name="{{ product.name }}" data-price="{{ product.price }}">
-          <div class="card h-100">
-            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+<div class="container-md my-4">
+  <h1 class="fw-bold my-4">Our Products</h1>
+  <p class="lead">
+    If you are interested in purchasing one of our products, please <a href="mailto:contact@maryaporr.com">contact us</a>.
+    We will get back to you as soon as possible. 
+  </p>
+  <div class="row">
+    <div class="col-md-6">
+        <div class="card shadow-sm m-3 m-lg-5">
+            <img src="/static/media/img/porride_in_funnel.jpg" class="card-img-top" alt="Mealworm-fortified porridge">
             <div class="card-body">
-              <h5 class="card-title">{{ product.name }}</h5>
-              <p class="card-text">${{ product.price }}</p>
-              <div class="">
-                <button href="{% url 'product_detail' product.pk %}" class="btn btn-primary">
-                  View Details
-                  <a href="{% url 'product_detail' product.pk %}" class="bi bi-arrow-right"></a>
-                </button>
-                <button href="#" class="btn btn-success" disabled>Add to Cart</button>
-              </div>
+                <h5 class="card-title">Mealworm-fortified porridge</h5>
+                <p class="card-text">
+                    High-quality powder for making nutritious and healthy porridge. 
+                    Fortified with mealworm extract to increase nutritional value. 
+                    It only requires water to be mixed with. 
+                </p>
+                <a href="#">
+                    <button disabled class="btn btn-primary">View Details</button>
+                </a>
             </div>
-          </div>
         </div>
-      {% endfor %}
-      {% if not products %}
-        <div class="col-12">
-          <p>No products found</p>
-        </div>
-      {% endif %}
     </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm m-3 m-lg-5">
+            <img src="/static/media/img/porride_in_funnel.jpg" class="card-img-top" alt="Mealworm-fortified porridge">
+            <div class="card-body">
+                <h5 class="card-title">Cricket-fortified porridge</h5>
+                <p class="card-text">
+                    We also have a cricket-fortified porridge powder. 
+                    We aim to price our products at an affordable 1 EUR per kilogram, 
+                    to reach as many children as possible.
+                </p>
+                <a href="#">
+                    <button disabled class="btn btn-primary">View Details</button>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
 
-  <br class="my-3">
-
-  <script>
-    function sortProducts() {
-      const sortBy = document.getElementById('sort-by').value;
-      const productList = document.getElementById('product-list');
-      const productCards = Array.from(productList.getElementsByClassName('product-card'));
-
-      productCards.sort((a, b) => {
-        const aValue = a.dataset[sortBy].toLowerCase();
-        const bValue = b.dataset[sortBy].toLowerCase();
-
-        if (sortBy === 'name') {
-          return aValue.localeCompare(bValue);
-        } else if (sortBy === 'price') {
-          return parseFloat(aValue) - parseFloat(bValue);
-        }
-      });
-
-      // Reorder the sorted cards
-      productCards.forEach(card => productList.appendChild(card));
-    }
-  </script>
 {% endblock %}
