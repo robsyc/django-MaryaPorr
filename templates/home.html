@@ -11,16 +11,16 @@
           <div class="col-md-4 offset-md-8">
             <div class="px-3">
               <img src="/static/media/logos/maryaporr-logo-square_white.png" class="" alt="MaryaPorr Logo">
-              <h1 class="my-4">
+              <h1 class="my-3 my-md-4">
                 End Malnutrition, Save Lives!
               </h1>
-              <p class="lead my-4">
+              <p class="lead my-3 my-md-4">
                 MaryaPorr is a highly nutritious ready-to-use therapeutic porridge 
                 to treat severe acute malnutrition in children.
               </p>
-              <div class="container my-4">
+              <div class="container my-3 my-md-4">
                 <a href="{% url 'products' %}" class="">
-                  <button class="btn btn-primary btn-lg m-2 mb-4">Our Porridges</button>
+                  <button class="btn btn-primary btn-lg m-2 mb-3 mb-md-4">Our Porridges</button>
                 </a>
                 <br>
                 <a href="#malnutrition-section">
@@ -358,6 +358,9 @@
 @media (max-width: 767px) {
   .mask {
     background-color: rgba(0, 0, 0, 0.75);
+  }
+  .mask img {
+    max-width: 10em;
   }
 }
 .bounce {
