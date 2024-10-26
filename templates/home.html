@@ -224,7 +224,13 @@
 <!-- Section: Insects -->
 <div class="bug-container larva-svg-container">
   <div class="bugRevealL">
-    <img class="larva-svg" src="/static/media/ui/larva.svg" alt="Larva graphic">
+    <img class="bug-svg larva-svg" src="/static/media/ui/larva.svg" alt="Larva graphic">
+  </div>
+</div>
+
+<div class="bug-container grasshopper-svg-container">
+  <div class="bugRevealR">
+    <img class="bug-svg grasshopper-svg" src="/static/media/ui/grasshopper.svg" alt="Grasshopper graphic">
   </div>
 </div>
 
@@ -241,13 +247,9 @@
       Insects are highly <u>nutritious and sustainable</u> food sources
     </h2>
   </div>
+</section>
 
-  <div class="bug-container grasshopper-svg-container">
-    <div class="bugRevealR">
-      <img class="grasshopper-svg" src="/static/media/ui/grasshopper.svg" alt="Grasshopper graphic">
-    </div>
-  </div>
-
+<section class="sectionReveal">
   <div class="container-md my-5">
 
     <div class="row my-3 my-md-5 sectionReveal">
@@ -274,9 +276,11 @@
             Mealworms & crickets are approved human foods by the European commission
           </li>
         </ul>
-        <a href="{% url 'products' %}">
-          <button class="btn btn-primary btn-lg mt-4">See Our Insect-fortified Porridges</button>
-        </a>
+        <div class="text-center mt-2">
+          <a href="{% url 'products' %}">
+            <button class="btn btn-primary btn-lg mt-4">See Our Insect-fortified Porridges</button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -286,9 +290,16 @@
 
 
 <!-- Section: Relief funds -->
+
+<div class="bug-container ladybug-svg-container">
+  <div class="bugRevealL">
+    <img class="bug-svg ladybug-svg" src="/static/media/ui/ladybug.svg" alt="Ladybug graphic">
+  </div>
+</div>
+
 <div class="bug-container worm-svg-container">
   <div class="bugRevealR">
-    <img class="worm-svg" src="/static/media/ui/worm.svg" alt="Worm graphic">
+    <img class="bug-svg worm-svg" src="/static/media/ui/worm.svg" alt="Worm graphic">
   </div>
 </div>
 
@@ -304,13 +315,9 @@
       Relief funds should be spent on <u>healthy food</u>
     </h2>
   </div>
+</section>
 
-  <div class="bug-container ladybug-svg-container">
-    <div class="bugRevealL">
-      <img class="ladybug-svg" src="/static/media/ui/ladybug.svg" alt="Ladybug graphic">
-    </div>
-  </div>
-
+<section class="sectionReveal">
   <div class="container-md my-5">
   </div>
 </section>
@@ -344,7 +351,7 @@
     margin-left: -250px;
   }
   .mask {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
   }
 }
 /* Small screens */
@@ -434,102 +441,82 @@
   }
 
 .bug-container {
-  width: 100%; 
+  width: 100%;
+  padding: 2rem;
 }
-
-.larva-svg {
-  transform: rotate(-40deg);
+.bug-svg {
   opacity: 0.7;
   position: absolute;
+}
+.larva-svg {
+  transform: rotate(0deg);
   left: 0;
 }
-
 .grasshopper-svg {
-  transform: rotate(10deg);
-  opacity: 0.7;
-  position: absolute;
+  transform: rotate(5deg);
   right: 0;
 }
-
 .worm-svg {
   transform: rotate(-5deg);
-  opacity: 0.7;
-  position: absolute;
   right: 0;
 }
-
 .ladybug-svg {
   transform: rotate(100deg);
-  opacity: 0.7;
-  position: absolute;
   left: 0;
 }
-
   /* Desktop */
 @media (min-width: 768px) {
+  .bug-container {
+    height: 4rem;
+  }
   .larva-svg {
-    height: 100px;
-    padding-left: 20px;
+    height: 140px;
   }
   .larva-svg-container {
-    position: absolute;
-    left: 0;
-    margin-top: -110px;
+    margin-bottom: -20px;
   }
   .grasshopper-svg {
     height: 160px;
-    padding-right: 20px;
   }
   .grasshopper-svg-container {
-    position: absolute;
-    right: 0;
-    margin-top: -50px;
+    margin-bottom: 10rem;
   }
   .ladybug-svg {
     height: 160px;
-    padding-left: 20px;
-  }
-  .ladybug-svg-container {
-    position: absolute;
-    left: 0;
-    margin-top: -5px;
   }
   .worm-svg {
     height: 150px;
-    padding-right: 15px;
   }
   .worm-svg-container {
-    position: absolute;
-    right: 0;
-    margin-top: -130px;
+    margin-bottom: 6rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
+  .bug-container {
+    height: 2.5rem;
+  }
   .larva-svg {
-    height: 60px;
+    height: 80px;
   }
   .larva-svg-container {
-    height: 3em;
+    margin-bottom: -20px;
   }
   .grasshopper-svg {
     height: 90px;
   }
   .grasshopper-svg-container {
-    height: 5em;
+    margin-bottom: 5rem;
+  }
+  .ladybug-svg {
+    height: 90px;
   }
   .worm-svg {
     height: 100px;
   }
   .worm-svg-container {
-    height: 7em;
-  }
-  .ladybug-svg {
-    height: 90px;
-  }
-  .ladybug-svg-container {
-    height: 6em;
+    margin-bottom: 4rem;
   }
 }
 </style>
