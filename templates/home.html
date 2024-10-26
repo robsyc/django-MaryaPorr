@@ -222,30 +222,33 @@
 <!-- Section: Malnutrition -->
 
 <!-- Section: Insects -->
-<div class="bug-container">
-  <div class="bugRevealR">
-    <img class="grasshopper-svg" src="/static/media/ui/grasshopper.svg" alt="Grasshopper graphic">
-  </div>
-</div>
-<div class="bug-container">
+<div class="bug-container larva-svg-container">
   <div class="bugRevealL">
     <img class="larva-svg" src="/static/media/ui/larva.svg" alt="Larva graphic">
   </div>
 </div>
 
 <section class="sectionReveal">
-  <div class="container-md my-5">
+  <div style="
+    background-color: hsl(120, 18%, 96%);;
+    border-top: 3px solid hsl(120, 18%, 68%); 
+    border-bottom: 3px solid hsl(120, 18%, 68%); 
+    padding: 2em;
+    margin-bottom: 4em;
+    margin-top: 2em;
+    ">
+    <h2 class="fs-2 text-center my-auto">
+      Insects are highly <u>nutritious and sustainable</u> food sources
+    </h2>
+  </div>
 
-    <div style="
-      background-color: hsl(120, 18%, 96%);;
-      border: 3px solid hsl(120, 18%, 68%); 
-      border-radius: 10px;
-      padding: 2em;
-      margin-bottom: 1em;">
-      <h2 class="lead fs-2 text-center my-auto">
-        Insects are highly <u>nutritious and sustainable</u> food sources
-      </h2>
+  <div class="bug-container grasshopper-svg-container">
+    <div class="bugRevealR">
+      <img class="grasshopper-svg" src="/static/media/ui/grasshopper.svg" alt="Grasshopper graphic">
     </div>
+  </div>
+
+  <div class="container-md my-5">
 
     <div class="row my-3 my-md-5 sectionReveal">
       <div class="col-md-6">
@@ -283,30 +286,32 @@
 
 
 <!-- Section: Relief funds -->
-<div class="bug-container">
-  <div class="bugRevealL">
-    <img class="ladybug-svg" src="/static/media/ui/ladybug.svg" alt="Ladybug graphic">
-  </div>
-</div>
-<div class="bug-container">
+<div class="bug-container worm-svg-container">
   <div class="bugRevealR">
     <img class="worm-svg" src="/static/media/ui/worm.svg" alt="Worm graphic">
   </div>
 </div>
 
 <section class="sectionReveal">
-  <div class="container-md my-5">
-    <div style="
-      background-color: hsl(11, 57%, 96%);
-      border: 3px solid hsl(11, 57%, 62%); 
-      border-radius: 10px;
-      padding: 2em;
-      margin-bottom: 1em;
-      ">
-      <h2 class="lead fs-2 text-center my-auto">
-        Relief funds should be spent on <u>healthy food</u>
-      </h2>
+  <div style="
+    background-color: hsl(11, 57%, 96%);
+    border-top: 3px solid hsl(11, 57%, 62%); 
+    border-bottom: 3px solid hsl(11, 57%, 62%); 
+    padding: 2em;
+    margin-bottom: 1em;
+    ">
+    <h2 class="fs-2 text-center my-auto">
+      Relief funds should be spent on <u>healthy food</u>
+    </h2>
+  </div>
+
+  <div class="bug-container ladybug-svg-container">
+    <div class="bugRevealL">
+      <img class="ladybug-svg" src="/static/media/ui/ladybug.svg" alt="Ladybug graphic">
     </div>
+  </div>
+
+  <div class="container-md my-5">
   </div>
 </section>
 
@@ -339,7 +344,7 @@
     margin-left: -250px;
   }
   .mask {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
   }
 }
 /* Small screens */
@@ -430,15 +435,6 @@
 
 .bug-container {
   width: 100%; 
-  z-index: -1;
-}
-
-.grasshopper-svg {
-  transform: rotate(10deg);
-  opacity: 0.7;
-  position: absolute;
-  right: 0;
-  padding-right: 2em;
 }
 
 .larva-svg {
@@ -446,15 +442,23 @@
   opacity: 0.7;
   position: absolute;
   left: 0;
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
-.worm-svg {
+.grasshopper-svg {
   transform: rotate(10deg);
   opacity: 0.7;
   position: absolute;
   right: 0;
-  padding-right: 1em;
+  padding-right: 1rem;
+}
+
+.worm-svg {
+  transform: rotate(-5deg);
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
 }
 
 .ladybug-svg {
@@ -462,47 +466,78 @@
   opacity: 0.7;
   position: absolute;
   left: 0;
-  padding-left: 2em;
+  padding-left: 2rem;
 }
 
   /* Desktop */
 @media (min-width: 768px) {
   .larva-svg {
     height: 100px;
-    padding-left: 2em;
+    padding-left: 2rem;
+  }
+  .larva-svg-container {
+    position: absolute;
+    left: 0;
+    margin-top: -7rem;
   }
   .grasshopper-svg {
     height: 160px;
-    padding-right: 2em;
+    padding-right: 2rem;
+  }
+  .grasshopper-svg-container {
+    position: absolute;
+    right: 0;
+    margin-top: -2rem;
   }
   .ladybug-svg {
     height: 160px;
-    padding-left: 4em;
+    padding-left: 4rem;
+  }
+  .ladybug-svg-container {
+    position: absolute;
+    left: 0;
+    margin-top: -1rem;
   }
   .worm-svg {
     height: 150px;
-    padding-right: 2em;
+    padding-right: 2rem;
+  }
+  .worm-svg-container {
+    position: absolute;
+    right: 0;
+    margin-top: -8rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-  .bug-container {
-    width: 100%; 
-    padding: 1em;
-    padding-bottom: 4.5em;
-  }
   .larva-svg {
     height: 60px;
+  }
+  .larva-svg-container {
+    height: 2rem;
   }
   .grasshopper-svg {
     height: 90px;
   }
-  .ladybug-svg {
-    height: 90px;
+  .grasshopper-svg-container {
+    height: 4.5rem;
+    margin-top: -3rem;
   }
   .worm-svg {
     height: 100px;
+  }
+  .worm-svg-container {
+    height: 8rem;
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+  }
+  .ladybug-svg {
+    height: 90px;
+  }
+  .ladybug-svg-container {
+    height: 4.8rem;
+    margin-top: -1rem;
   }
 }
 </style>
