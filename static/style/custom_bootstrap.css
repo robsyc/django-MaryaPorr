@@ -57,7 +57,7 @@
   --bs-primary-text-emphasis: hsl(258, 59%, 20%);
   --bs-secondary-text-emphasis: hsl(188, 100%, 20%);
   --bs-success-text-emphasis: #104912;
-  --bs-info-text-emphasis: #2f515e;
+  --bs-info-text-emphasis: hsl(197, 33%, 28%);
   --bs-warning-text-emphasis: #66350b;
   --bs-danger-text-emphasis: #661a16;
   --bs-light-text-emphasis: #555;
