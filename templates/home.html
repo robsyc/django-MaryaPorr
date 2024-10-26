@@ -153,7 +153,7 @@
 </section>
 
 <section class="sectionReveal">
-  <div class="container-md my-5">
+  <div class="container-md my-5 mb-4 mb-md-5">
     <div class="container-lg my-4 px-md-3">
       <div class="row">
         <div class="col-md-6 mb-4 mb-md-0">
@@ -222,98 +222,83 @@
 <!-- Section: Malnutrition -->
 
 <!-- Section: Insects -->
-<div class="container-fluid p-0 overflow-hidden">
-  <div class="row">
-    <div class="col-6 col-md-2">
-      <div class="bugRevealL">
-        <img 
-        class="float-start p-3 float-md-end" 
-        style="
-        transform: rotate(-40deg);
-        opacity: 0.7;
-        "
-        src="/static/media/ui/larva.svg" height="90px" alt="Larva graphic">
-      </div>
-    </div>
-    <div class="col-md-8 d-none d-md-block"></div>
-    <div class="col-6 col-md-2">
-      <div class="bugRevealR">
-        <img 
-        class="float-end p-3 float-md-start" 
-        style="
-        transform: rotate(10deg);
-        opacity: 0.7;
-        "
-        src="/static/media/ui/grasshopper.svg" height="120px" alt="Grasshopper graphic">
-      </div>
-    </div>
+<div class="bug-container">
+  <div class="bugRevealR">
+    <img class="grasshopper-svg" src="/static/media/ui/grasshopper.svg" alt="Grasshopper graphic">
+  </div>
+</div>
+<div class="bug-container">
+  <div class="bugRevealL">
+    <img class="larva-svg" src="/static/media/ui/larva.svg" alt="Larva graphic">
   </div>
 </div>
 
-<section class="sectionReveal my-5">
-  <div class="container-md">
+<section class="sectionReveal">
+  <div class="container-md my-5">
+
     <div style="
       background-color: hsl(120, 18%, 96%);;
       border: 3px solid hsl(120, 18%, 68%); 
       border-radius: 10px;
       padding: 2em;
-      "
-      class="text-center"
-      >
-      <h2 class="lead my-auto fs-2">
+      margin-bottom: 1em;">
+      <h2 class="lead fs-2 text-center my-auto">
         Insects are highly <u>nutritious and sustainable</u> food sources
       </h2>
     </div>
+
+    <ul class="list-group list-group-flush" style="background-color:rgba(0, 0, 0, 0.0);">
+      <li class="list-group-item" style="background-color:rgba(0, 0, 0, 0.0);">
+        Insect farming is <a href="https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2023.1112950/full">far more sustainable</a> compared to livestock
+      </li>
+      <li class="list-group-item" style="background-color:rgba(0, 0, 0, 0.0);">
+        Requires significantly less land and water to produce
+      </li>
+      <li class="list-group-item" style="background-color:rgba(0, 0, 0, 0.0);">
+        Almost zero greenhouse gas emissions
+      </li>
+      <li class="list-group-item" style="background-color:rgba(0, 0, 0, 0.0);">
+        Take only weeks to grow, as opposed to months or years
+      </li>
+      <li class="list-group-item" style="background-color:rgba(0, 0, 0, 0.0);">
+        Approved human food by the European commission
+      </li>
+    </ul>
+
   </div>
 </section>
+
 <!-- Section: Insects -->
 
 
 <!-- Section: Relief funds -->
-<div class="container-fluid p-0 overflow-hidden">
-  <div class="row">
-    <div class="col-6 col-md-2">
-      <div class="bugRevealL">
-        <img 
-        class="float-start p-3 float-md-end" 
-        style="
-        transform: rotate(100deg);
-        opacity: 0.7;
-        "
-        src="/static/media/ui/ladybug.svg" height="150px" alt="Ladybug graphic">
-      </div>
-    </div>
-    <div class="col-md-8 d-none d-md-block"></div>
-    <div class="col-6 col-md-2">
-      <div class="bugRevealR">
-        <img 
-        class="float-end p-3 float-md-start" 
-        style="
-        transform: rotate(10deg);
-        opacity: 0.7;
-        "
-        src="/static/media/ui/worm.svg" height="150px" alt="Worm graphic">
-      </div>
-    </div>
+<div class="bug-container">
+  <div class="bugRevealL">
+    <img class="ladybug-svg" src="/static/media/ui/ladybug.svg" alt="Ladybug graphic">
+  </div>
+</div>
+<div class="bug-container">
+  <div class="bugRevealR">
+    <img class="worm-svg" src="/static/media/ui/worm.svg" alt="Worm graphic">
   </div>
 </div>
 
-<section class="sectionReveal my-5">
-  <div class="container-md">
+<section class="sectionReveal">
+  <div class="container-md my-5">
     <div style="
       background-color: hsl(11, 57%, 96%);
       border: 3px solid hsl(11, 57%, 62%); 
       border-radius: 10px;
       padding: 2em;
-      "
-      class="text-center"
-      >
-    <h2 class="lead my-auto fs-2">
-      Relief funds should be spent on <u>healthy food</u>
-    </h2>
-  </div>
+      margin-bottom: 1em;
+      ">
+      <h2 class="lead fs-2 text-center my-auto">
+        Relief funds should be spent on <u>healthy food</u>
+      </h2>
+    </div>
   </div>
 </section>
+
 <!-- Section: Relief funds -->
 
 <style>
@@ -431,6 +416,84 @@
       --angle: 360deg;
     }
   }
+
+.bug-container {
+  width: 100%; 
+  z-index: -1;
+}
+
+.grasshopper-svg {
+  transform: rotate(10deg);
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  padding-right: 2em;
+}
+
+.larva-svg {
+  transform: rotate(-40deg);
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  padding-left: 1em;
+}
+
+.worm-svg {
+  transform: rotate(10deg);
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  padding-right: 1em;
+}
+
+.ladybug-svg {
+  transform: rotate(100deg);
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  padding-left: 2em;
+}
+
+  /* Desktop */
+@media (min-width: 768px) {
+  .larva-svg {
+    height: 100px;
+    padding-left: 2em;
+  }
+  .grasshopper-svg {
+    height: 160px;
+    padding-right: 2em;
+  }
+  .ladybug-svg {
+    height: 160px;
+    padding-left: 4em;
+  }
+  .worm-svg {
+    height: 150px;
+    padding-right: 2em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .bug-container {
+    width: 100%; 
+    padding: 1em;
+    padding-bottom: 4.5em;
+  }
+  .larva-svg {
+    height: 60px;
+  }
+  .grasshopper-svg {
+    height: 90px;
+  }
+  .ladybug-svg {
+    height: 90px;
+  }
+  .worm-svg {
+    height: 100px;
+  }
+}
 </style>
 
 <script>
