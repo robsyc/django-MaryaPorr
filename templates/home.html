@@ -2,32 +2,50 @@
 
 {% block content %}
 
-<!-- Hero page -->
-<div class="px-4 pt-1 pb-4 mt-2 mb-4 mb-md-5 text-center">
-  <!-- <h1 class="display-5 fw-bold">MaryaPorr</h1> -->
-  <img src="/static/media/logos/maryaporr-logo-square.png" class="img-fluid mb-3" style="max-width: 10em; opacity: 0.8;" alt="MaryaPorr Logo">
-  <div class="col-lg-6 mx-auto">
-    <h1 class="mb-4">To end malnutrition once and for all!</h1>
-    <p class="lead mb-4">MaryaPorr is a highly nutritious ready-to-use therapeutic porridge to treat severe acute malnutrition in children.</p>
-    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-      <a href="{% url 'products' %}">
-        <button class="btn btn-primary btn-lg">Our Products</button>
-      </a>
-      <a href="{% url 'about' %}">
-        <button class="btn btn-outline-secondary btn-lg">Our Mission</button>
-      </a>
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="mask">
+    <div class="text-white m-0 p-0 w-100 text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 offset-md-8">
+            <div class="px-3">
+              <img src="/static/media/logos/maryaporr-logo-square_white.png" class="" alt="MaryaPorr Logo">
+              <h1 class="my-4">
+                End Malnutrition, Save Lives!
+              </h1>
+              <p class="lead my-4">
+                MaryaPorr is a highly nutritious ready-to-use therapeutic porridge 
+                to treat severe acute malnutrition in children.
+              </p>
+              <div class="container my-4">
+                <a href="{% url 'products' %}" class="">
+                  <button class="btn btn-primary btn-lg m-2 mb-4">Our Porridges</button>
+                </a>
+                <br>
+                <a href="#malnutrition-section">
+                  <button class="btn btn-outline-secondary btn-lg m-2">
+                    <p class="m-0">Our Mission</p>
+                    <svg class="bounce" style="margin: 0px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Carousel slideshow -->
-<div class="text-center">
-  <div class="row mx-auto my-auto justify-content-center">
-    <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner" role="listbox">
+<div class="bg-dark">
+  <div class="row mx-0 my-auto justify-content-center bg-dark">
+    <div id="recipeCarousel" class="carousel slide px-0 bg-dark" data-bs-ride="carousel">
+      <div class="carousel-inner bg-dark" role="listbox">
         <div class="carousel-item active" data-bs-interval="5000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/kids_handinhand.jpg" class="img-fluid" alt="Happy kids shoulder to shoulder">
               </div>
@@ -36,7 +54,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/zoom_in.jpg" class="img-fluid" alt="Zoom in on African child">
               </div>
@@ -45,7 +63,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/maryam.jpg" class="img-fluid" alt="Maryam and her promotors">
               </div>
@@ -54,7 +72,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/kid_w_aid.jpg" class="img-fluid" alt="Malnourished child getting medical aid">
               </div>
@@ -63,7 +81,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/cricket.jpg" class="img-fluid" alt="Zoomed in picture of a cricket">
               </div>
@@ -72,7 +90,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/mother_feeding_child.jpg" class="img-fluid" alt="Mother feeding her child">
               </div>
@@ -81,7 +99,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/album/lots_of_kids.jpg" class="img-fluid" alt="A crowd of happy kids in blue school clothes">
               </div>
@@ -90,7 +108,7 @@
         </div>
         <div class="carousel-item" data-bs-interval="4000">
           <div class="col-md-3">
-            <div class="card">
+            <div class="card bg-dark">
               <div class="card-img">
                 <img src="/static/media/products/porride_in_funnel.jpg" class="img-fluid" alt="Porridge in a funnel">
               </div>
@@ -109,11 +127,28 @@
 </div>
 
 <!-- Section: Malnutrition -->
-<section class="reveal">
+<div id="malnutrition-section"></div>
+<section class="sectionReveal">
+  <div class="container-md my-3 my-md-5 mb-5 px-md-3">
+    <div class="row">
+      <div class="col-md-8 col-12 mx-auto">
+        <div class="mycard" style="
+          background-color: hsl(120, 18%, 68%); 
+          border: 3px solid hsl(120, 18%, 60%);">
+          <h2 class="lead my-auto text-dark fs-2">
+            <u>Every 10 seconds, a child dies</u> from malnutrition,
+            <u id="incrementing-number">0</u> 
+            since you started reading
+            this page.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sectionReveal">
   <div class="container-md my-5">
-    <h1 class="fw-bold py-2">
-      Children are suffering from malnutrition
-    </h1>
     <div class="container-lg my-4 px-md-3">
       <div class="row">
         <div class="col-md-6 mb-4 mb-md-0">
@@ -125,12 +160,12 @@
             <div class="col-md-12">
               <p>
                 The <a href="https://www.who.int/news-room/fact-sheets/detail/malnutrition" target="_blank">World Health Organization (WHO)</a> 
-                informs us that malnutrition in children is a major public health issue.
+                informs us that ...
               </p>
-              <ul>
-                <li>Nearly half of deaths among children under 5 years of age are linked to undernutrition.</li>
-                <li>In 2022, 149 million children under 5 were estimated to be stunted (too short for age), 45 million were estimated to be wasted (too thin for height).</li>
-                <li>In Africa, 50% of preschool children have at least one micronutrient deficiency.</li>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">45% of deaths among children under 5 are linked to undernutrition</li>
+                <li class="list-group-item">In 2022, 149 million children under 5 were estimated to be stunted (too short)</li>
+                <li class="list-group-item">In Africa, 50% of preschool children have a micronutrient deficiency</li>
               </ul>
             </div>
             <div class="d-none col-md-12 d-lg-block px-0 px-lg-2">
@@ -180,42 +215,153 @@
   </div>
 </section>
 
-<section class="reveal">
-  <div class="container-md my-4 px-md-3">
-    <div class="row">
-      <div class="col-md-8 col-12 mx-auto">
-        <div class="triangle" style="background-color: hsl(120, 18%, 68%); border: 3px solid hsl(120, 18%, 60%);">
-          <p class="lead my-auto text-dark fs-3">
-            Every 10 seconds, a child dies from malnutrition,
-            <u id="incrementing-number">0</u> 
-            since you started reading
-            this page.
-          </p>
-        </div>
+
+
+<!-- <img src="/static/media/ui/ladybug.svg" alt="Ladybug graphic">
+<img src="/static/media/ui/big_bug.svg" alt="Bug graphic">
+<img src="/static/media/ui/larva.svg" alt="Larva graphic">
+<img src="/static/media/ui/worm.svg" alt="Worm graphic"> -->
+
+<div class="container-fluid p-0 overflow-hidden">
+  <div class="row">
+    <div class="col-6 col-md-2">
+      <div class="bugRevealL">
+        <img 
+        class="float-start p-3 float-md-end" 
+        style="
+        transform: rotate(-40deg);
+        opacity: 0.7;
+        "
+        src="/static/media/ui/larva.svg" height="90px" alt="Larva graphic">
       </div>
+    </div>
+    <div class="col-md-8 d-none d-md-block"></div>
+    <div class="col-6 col-md-2">
+      <div class="bugRevealR">
+        <img 
+        class="float-end p-3 float-md-start" 
+        style="
+        transform: rotate(10deg);
+        opacity: 0.7;
+        "
+        src="/static/media/ui/grasshopper.svg" height="120px" alt="Grasshopper graphic">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section: Insects -->
+<section class="sectionReveal my-5">
+  <div class="container-md">
+    <div style="
+      background-color: hsl(120, 18%, 96%);;
+      border: 3px solid hsl(120, 18%, 68%); 
+      border-radius: 10px;
+      padding: 2em;
+      "
+      class="text-center"
+      >
+      <h2 class="lead my-auto fs-2">
+        Insects are highly <u>nutritious and sustainable</u> food sources
+      </h2>
     </div>
   </div>
 </section>
 
-<!-- Section: Insects -->
-<section class="reveal py-4">
-  <div class="container-md my-4 px-md-3">
-    <h1 class="fw-bold">
-      Insects are a highly nutritious and sustainable food source
-    </h1>
+
+<div class="container-fluid p-0 overflow-hidden">
+  <div class="row">
+    <div class="col-6 col-md-2">
+      <div class="bugRevealL">
+        <img 
+        class="float-start p-3 float-md-end" 
+        style="
+        transform: rotate(100deg);
+        opacity: 0.7;
+        "
+        src="/static/media/ui/ladybug.svg" height="150px" alt="Ladybug graphic">
+      </div>
+    </div>
+    <div class="col-md-8 d-none d-md-block"></div>
+    <div class="col-6 col-md-2">
+      <div class="bugRevealR">
+        <img 
+        class="float-end p-3 float-md-start" 
+        style="
+        transform: rotate(10deg);
+        opacity: 0.7;
+        "
+        src="/static/media/ui/worm.svg" height="150px" alt="Worm graphic">
+      </div>
+    </div>
   </div>
-</section>
+</div>
+
 
 <!-- Section: Relief funds -->
-<section class="reveal py-4">
-  <div class="container-md my-4 px-md-3">
-    <h1 class="fw-bold">
-      Relief funds should be spent on healthy food
-    </h1>
+<section class="sectionReveal my-5">
+  <div class="container-md">
+    <div style="
+      background-color: hsl(11, 57%, 96%);
+      border: 3px solid hsl(11, 57%, 62%); 
+      border-radius: 10px;
+      padding: 2em;
+      "
+      class="text-center"
+      >
+    <h2 class="lead my-auto fs-2">
+      Relief funds should be spent on <u>healthy food</u>
+    </h2>
+  </div>
   </div>
 </section>
 
 <style>
+  /* Hero section */
+  .hero-section {
+  background-image: url('/static/media/album/maryam_DO.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.mask {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask .container {
+  text-align: center;
+}
+.mask img {
+  max-width: 14em;
+  opacity: 0.8;
+}
+/* Large screens */
+@media (min-width: 768px) {
+  .hero-section {
+    margin-left: -250px;
+  }
+  .mask {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+  }
+}
+/* Small screens */
+@media (max-width: 767px) {
+  .mask {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+.bounce {
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-10px);}
+	60% {transform: translateY(-4px);}
+}
+
+
   /* Slideshow Images */
   @media (max-width: 767px) {
 		.carousel-inner .carousel-item > div {
@@ -245,8 +391,8 @@
 		transform: translateX(0);
 	}
 
-  /* Triangle Counter */
-  .triangle {
+  /* mycard Counter */
+  .mycard {
     margin: 0 auto;
     padding: 2em;
     width: 100%;
@@ -254,7 +400,7 @@
     border-radius: 10px;
     position: relative;
   }
-  .triangle::after, .triangle::before {
+  .mycard::after, .mycard::before {
     --angle: 0deg;
     content: '';
     position: absolute;
@@ -273,7 +419,7 @@
     initial-value: 0deg;
     inherits: false;
   }
-  .triangle::before {
+  .mycard::before {
     filter: blur(1.5rem);
     opacity: 0.8;
   }
@@ -304,7 +450,7 @@
   }
   })
 
-  // Triangle Counter
+  // mycard Counter
   let count = 0;
   const incrementingNumber = document.getElementById('incrementing-number');
   
@@ -313,14 +459,30 @@
     incrementingNumber.textContent = count;
   }, 10000);
 
+  
   // ScrollReveal
-  ScrollReveal().reveal('.reveal', {
-    delay: 200,
+  ScrollReveal().reveal('.sectionReveal', { 
+    delay: 500,
     duration: 1000,
     distance: '50px',
+    reset: false,
     origin: 'bottom',
-    reset: false
   });
+  ScrollReveal().reveal('.bugRevealR', { 
+    delay: 700,
+    duration: 1500,
+    distance: '200px',
+    reset: false,
+    origin: 'right',
+  });
+  ScrollReveal().reveal('.bugRevealL', { 
+    delay: 800,
+    duration: 1800,
+    distance: '200px',
+    reset: false,
+    origin: 'left',
+  });
+
 </script>
 
 {% endblock %}
