@@ -1,5 +1,5 @@
-# django-MaryaPorr
-Django e-commerce website of [MaryaPorr](https://www.maryaporr.com)
+# django-MaryaNutri
+Django e-commerce website of [MaryaNutri](https://www.maryanutri.com)
 
 ## Local setup instructions (for superior linux users)
 

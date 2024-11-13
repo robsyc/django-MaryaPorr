@@ -6,30 +6,28 @@
 <div class="hero-section shadow">
   <div class="mask">
     <div class="text-white m-0 p-0 w-100 text-center">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4 offset-md-8">
-            <div class="px-3">
-              <img src="/static/media/logos/maryaporr-logo-square_white.png" class="" alt="MaryaPorr Logo">
-              <h1 class="my-3 my-md-4">
-                End Malnutrition, Save Lives!
-              </h1>
-              <p class="lead my-3 my-md-4">
-                MaryaPorr is a highly nutritious ready-to-use therapeutic porridge 
-                to treat severe acute malnutrition in children.
-              </p>
-              <div class="container my-3 my-md-4">
-                <a href="{% url 'products' %}" class="">
-                  <button class="btn btn-primary btn-lg m-2 mb-3 mb-md-4">Our Porridges</button>
-                </a>
-                <br>
-                <a href="#malnutrition-section">
-                  <button class="btn btn-outline-secondary btn-lg m-2">
-                    <p class="m-0">Our Mission</p>
-                    <svg class="bounce" style="margin: 0px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
-                  </button>
-                </a>
-              </div>
+      <div class="row">
+        <div class="col-md-4 offset-md-8">
+          <div class="px-3">
+            <img src="/static/media/logos/maryaporr-logo-square_white.png" class="" alt="MaryaPorr Logo">
+            <h1 class="my-3 my-md-4">
+              End Malnutrition, Save Lives!
+            </h1>
+            <p class="lead my-3 my-md-4">
+              MaryaNutri is a highly nutritious ready-to-use therapeutic porridge 
+              to treat severe acute malnutrition in children.
+            </p>
+            <div class="container my-3 my-md-4 pb-2">
+              <a href="{% url 'products' %}" class="">
+                <button class="btn btn-primary btn-lg m-2 mb-3 mb-md-4">Our Porridges</button>
+              </a>
+              <br>
+              <a href="#malnutrition-section">
+                <button class="btn btn-outline-secondary btn-lg m-2">
+                  <p class="m-0">Our Mission</p>
+                  <svg class="bounce" style="margin: 0px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -40,24 +38,26 @@
 
 <!-- Section: Malnutrition -->
 <div id="malnutrition-section"></div>
-<section class="sectionReveal">
-  <div class="container-md my-5 px-md-3">
-    <div class="row">
-      <div class="col-md-8 col-12 mx-auto">
-        <div class="mycard" style="
-          background-color: hsl(120, 18%, 68%); 
-          border: 3px solid hsl(120, 18%, 60%);">
-          <h2 class="lead my-auto text-dark fs-2">
-            <u>Every 10 seconds, a child dies</u> from malnutrition,
-            <u id="incrementing-number">0</u> 
-            since you started reading
-            this page.
-          </h2>
+<div class="pt-5 pb-1" style="background: linear-gradient(to bottom, black, transparent);">
+  <section class="sectionReveal">
+    <div class="container-md my-5 px-md-3">
+      <div class="row">
+        <div class="col-md-8 col-12 mx-auto">
+          <div class="mycard py-md-5" style="
+            background-color: hsl(120, 18%, 68%); 
+            border: 3px solid hsl(120, 18%, 60%);">
+            <h2 class="lead my-auto text-dark fs-1">
+              <u>Every 10 seconds, a child dies</u> from malnutrition,
+              <u id="incrementing-number">0</u> 
+              since you started reading
+              this page.
+            </h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <section class="sectionReveal my-5">
   <div class="container-md my-5 mb-4 mb-md-5">
@@ -325,13 +325,13 @@
     margin-left: -250px;
   }
   .mask {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
   }
 }
 /* Small screens */
 @media (max-width: 767px) {
   .mask {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.8);
   }
   .mask img {
     max-width: 10em;

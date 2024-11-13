@@ -34,7 +34,7 @@ DEV_MODE = os.getenv("DEV_MODE")
 if not SECRET_KEY or not STRIPE_PUBLIC_KEY or not STRIPE_SECRET_KEY or not DEV_MODE:
     raise ValueError("One or more environment variables are not set.")
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', '.now.sh', 'www.maryaporr.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app', '.now.sh', 'www.maryanutri.com']
 
 # Application definition
 

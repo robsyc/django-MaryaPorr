@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaryaPorr {% block title %}{% endblock %}</title>
+    <title>MaryaNutri {% block title %}{% endblock %}</title>
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
@@ -19,7 +19,7 @@
         "
     class="navbar navbar-expand-lg navbar-light mt-0 sticky-top zindex-sticky">
         <div class="container-md">
-            <a class="navbar-brand" href="{% url 'home' %}">MaryaPorr</a>
+            <a class="navbar-brand fs-4" href="{% url 'home' %}">MaryaNutri</a>
             <button 
             class="navbar-toggler" type="button" 
             data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
@@ -27,15 +27,18 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav banner">
-                    <li class="nav-item">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item mx-md-5 fs-4">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-md-5 fs-4">
                         <a class="nav-link" href="{% url 'products' %}">Products</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mx-md-5 fs-4">
                         <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item mx-md-5 fs-4">
+                        <a class="nav-link" href="mailto:contact@maryanutri.com">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +54,7 @@
         <div class="container">
             <div class="row pt-4 pb-2">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h5>About MaryaPorr</h5>
+                    <h5>About MaryaNutri</h5>
                     <p>Highly nutritious baby porridge in your neighbourhood!</p>
                 </div>
                 <div class="col-lg-3 mb-4 mb-lg-0">
@@ -59,21 +62,21 @@
                     <ul class="list-unstyled">
                         <li><a href="{% url 'products' %}" class="text-muted">Products</a></li>
                         <li><a href="{% url 'about' %}" class="text-muted">About</a></li>
-                        <li><a href="mailto:contact@maryaporr.com" class="text-muted">Contact</a></li>
+                        <li><a href="mailto:contact@maryanutri.com" class="text-muted">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h5>Connect With Us</h5>
                     <ul class="list-inline py-1">
                         <li class="list-inline-item mx-1"><a href="https://www.facebook.com/people/MaryaPorr/61564453629235/" class="text-muted"><i class="bi bi-facebook h3"></i></a></li>
-                        <li class="list-inline-item mx-1"><a href="https://www.linkedin.com/company/maryaporr/posts/?feedView=all" class="text-muted"><i class="bi bi-linkedin h3"></i></a></li>
+                        <li class="list-inline-item mx-1"><a href="https://www.linkedin.com/company/maryanutri" class="text-muted"><i class="bi bi-linkedin h3"></i></a></li>
                     </ul>
                 </div>
             </div>
             <hr>
             <div class="row pt-3 pb-4">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">© <span id="year"></span> MaryaPorr. All rights reserved.</p>
+                    <p class="mb-0">© <span id="year"></span> MaryaNutri. All rights reserved.</p>
                 </div>
                 <!-- <div class="col-md-6 text-center text-md-end">
                     <a href="#" class="text-muted">Privacy Policy</a>
